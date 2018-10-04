@@ -1,9 +1,7 @@
-PROGRAM= area
+run: subarr
+	./subarr
 
-run: ${PROGRAM}
-    ./${PROGRAM}
+subarr: subarr.c
+	gcc -Wall -std=c11 subarr.c -o subarr
 
-${PROGRAM}: ${PROGRAM}.c
-    gcc -Wall -std=c11 ${PROGRAM}.c -o ${PROGRAM}
-
-build: ${PROGRAM}
+build: subarr
